@@ -13,6 +13,8 @@ const contactSchema = z.object({
   message: z.string().trim().min(1, "Mensagem é obrigatória").max(1000),
 });
 
+const WHATSAPP_NUMBER = "5566981343075";
+
 const ContactSection = () => {
   const ref = useScrollAnimation();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -30,7 +32,17 @@ const ContactSection = () => {
       return;
     }
     setErrors({});
-    toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+
+    const message =
+      `👋 *Olá, Angela!*%0A%0A` +
+      `*Nome:* ${form.name}%0A` +
+      `*E-mail:* ${form.email}%0A` +
+      `*Assunto:* ${form.subject}%0A%0A` +
+      `*Mensagem:*%0A${form.message}`;
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+
+    toast.success("Redirecionando para o WhatsApp!");
     setForm({ name: "", email: "", subject: "", message: "" });
   };
 
