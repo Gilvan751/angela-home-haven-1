@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logoAngelaEnxovais.png";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
