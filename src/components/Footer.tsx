@@ -27,7 +27,7 @@ const Footer = () => {
             <h4 className="font-semibold text-secondary-foreground mb-4">Contato</h4>
             <ul className="space-y-2 text-sm text-secondary-foreground/70">
               <li>angelaamaradejesussouss@gmail.com</li>
-              <li>(66) 98134-3075</li>
+              <li>(66)98134-3075</li>
             </ul>
             <div className="flex gap-4 mt-4">
               <a href="#" className="text-secondary-foreground/70 hover:text-primary transition-colors" aria-label="Instagram">
