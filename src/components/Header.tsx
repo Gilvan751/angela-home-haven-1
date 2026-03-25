@@ -17,8 +17,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
-        <a href="#inicio" className="font-heading text-xl md:text-2xl font-bold text-secondary tracking-wide">
-          Angela Enxovais
+        <a href="#inicio" className="flex items-center">
+          <img src={logo} alt="Angela Enxovais" className="h-12 md:h-14 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-6">
